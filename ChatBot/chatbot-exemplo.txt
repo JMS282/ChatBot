@@ -1,0 +1,27 @@
+#-*-coding:utf8;-*-
+"""
+This is an example file which tell you how to use JMS - ChatBot
+
+@Author: Jmsixpenze
+@Date: 2019-06-28
+"""
+# Fazendo a importação do modulo
+from ChatBot.ChatBot import ChatBot
+
+# Criando um chatbot chamado "Arse"
+bot = ChatBot("Arse")
+
+while True:
+      # Aqui passamos as perguntas para o chatbot
+      question = raw_input("Admin: ")
+      
+      # Aqui é onde o chatbot passa a resposta
+      response = bot.get_response(question)
+      # Mostrando o resultado na tela
+      print response
+      
+      """ Se quiser acessa o nome do chatbot basta usar o codigo:
+          bot.get_chatbot_name()
+      """
+   
+   

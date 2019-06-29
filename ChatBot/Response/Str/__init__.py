@@ -1,0 +1,1 @@
+﻿# Apenas um arquivo para que o Python veja essa pasta como um módulo

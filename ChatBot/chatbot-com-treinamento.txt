@@ -1,0 +1,53 @@
+#-*-coding:utf8;-*-
+"""
+This is an example file which tell you how to use JMS - ChatBot
+
+@Author: Jmsixpenze
+@Date: 2019-06-28
+"""
+# Fazendo a importação do modulo
+from ChatBot.ChatBot import ChatBot
+
+# Criando um chatbot chamado "Arse"
+bot = ChatBot("Arse")
+
+"""
+     NB: O treinamento pode ser feito com ate 10 dicionarios, esse é o numero maximo,
+         dependendo de quantos arquivos voce quer treinar
+
+Para treinar o chatbot - basta passar o codigo:
+bot.set_trainder_1(aqui_coloca_o_arquivo_*json_contendo_um_dicionario)
+
+==> set_trainer_1() - quer dizer que tamos a passar o premeiro arquivo para treinamento
+    Pode-se acrescentar:
+==> set_trainer_2()
+==> set_trainer_n() lembrando até 10
+Exemplo:
+        data1 = {"oi":"ola","ola":"oi","como vai":"bem e voce"}
+        bot.set_trainer_1(data1)
+        data2 = {"o que é python":"python é uma linguagem de programação"}
+        bot.set_trainer_2(data2)
+        
+"""
+
+
+data1 = {"oi":"ola","ola":"oi","como vai":"bem e voce"}
+bot.set_trainer_1(data1)
+data2 = {"o que é python":"python é uma linguagem de programação"}
+bot.set_trainer_2(data2)
+
+while True:
+      # Aqui passamos as perguntas para o chatbot
+      question = raw_input("Admin: ")
+      
+      # Aqui é onde o chatbot passa a resposta
+      response = bot.get_response(question)
+      # Mostrando o resultado na tela
+      print response
+      
+      """ 
+          Se quiser acessa o nome do chatbot basta usar o codigo:
+          bot.get_chatbot_name()
+      """
+   
+   
